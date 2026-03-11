@@ -38,6 +38,7 @@ Server fetches countries list and extended country details from external API and
 ### Build the project
 
 1. Execute "docker-compose up --build" in the terminal
-2. Execute "npm run dev" in the terminal
-3. Open http://127.0.0.1:8000 in your browser
-4. Log in using the credentials of the user you created in Auth0
+2. Execute "npm update" in the terminal
+3. Execute "npm run dev" in the terminal
+4. Open http://127.0.0.1:8000 in your browser
+5. Log in using the credentials of the user you created in Auth0
