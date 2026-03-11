@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <script>
+        window.__LOGGED_IN__ = @json(auth()->check());
+    </script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
