@@ -14,23 +14,23 @@ export const useCountriesStore = defineStore('countries', {
 
   getters: {
     countriesByRegion(state) {
-      const countriesByRehion = {};
+      const countriesByRegion = {};
 
       for (const country of state.countries) {
         const region = country.region || 'Other';
 
-        if (!countriesByRehion[region]) {
-          countriesByRehion[region] = [];
+        if (!countriesByRegion[region]) {
+          countriesByRegion[region] = [];
         }
 
-        countriesByRehion[region].push(country);
+        countriesByRegion[region].push(country);
       }
 
-      for (const region of Object.keys(countriesByRehion)) {
-        countriesByRehion[region].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      for (const region of Object.keys(countriesByRegion)) {
+        countriesByRegion[region].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
       }
 
-      const sorted = Object.entries(countriesByRehion).sort(([a], [b]) => a.localeCompare(b));
+      const sorted = Object.entries(countriesByRegion).sort(([a], [b]) => a.localeCompare(b));
       return Object.fromEntries(sorted);
     },
 
