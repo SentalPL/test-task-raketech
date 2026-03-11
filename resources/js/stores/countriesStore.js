@@ -88,10 +88,13 @@ export const useCountriesStore = defineStore('countries', {
       try {
         const { data } = await axios.get(`/api/countries/${encodeURIComponent(countryName)}`);
 
-        this.selectedCountry = data;
-        this.countriesDetails[countryName] = data;
+        if (this.loading) {
+          this.selectedCountry = data;
+          this.countriesDetails[countryName] = data;
+        }
 
         return data;
+
       } catch (e) {
         this.error = e.response?.data?.error ?? 'Failed to load country details';
         this.selectedCountry = null;
