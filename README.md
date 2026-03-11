@@ -23,7 +23,7 @@ Server fetches countries list and extended country details from external API and
    - Allowed Web Origins: http://127.0.0.1:8000
 4. Go to "User Management" > "Users" and create a new user with the following properties:
    - Connection: "Username-Password-Authentication" database
-   - Email: anything you wihs
+   - Email: anything you wish
    - Password: anything you wish
 
 ### Configure the application
@@ -38,5 +38,6 @@ Server fetches countries list and extended country details from external API and
 ### Build the project
 
 1. Execute "docker-compose up --build" in the terminal
-2. Open http://127.0.0.1:8000 in your browser
-3. Log in using the credentials of the user you created in Auth0
+2. Execute "npm run dev" in the terminal
+3. Open http://127.0.0.1:8000 in your browser
+4. Log in using the credentials of the user you created in Auth0
